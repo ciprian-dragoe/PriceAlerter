@@ -1,16 +1,19 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using PriceAlerter.Models;
+using PriceAlerterBusiness;
 
 namespace PriceAlerter.Controllers;
 
 public class LinksController : Controller
 {
     private readonly ILogger<LinksController> _logger;
+    private readonly IProductService _productService;
 
-    public LinksController(ILogger<LinksController> logger)
+    public LinksController(ILogger<LinksController> logger, IProductService productService)
     {
         _logger = logger;
+        _productService = productService;
     }
 
     public IActionResult List()
@@ -25,7 +28,7 @@ public class LinksController : Controller
 
     public IActionResult ValidateDomain(string domain)
     {
-        
+        var product = _productService.ExtractProductFromDomain(domain);
         return RedirectToAction("SetLimitPrice");
     }
 

@@ -7,4 +7,9 @@
         <RootNamespace>PriceAlerter</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\PriceAlerterBusiness\PriceAlerterBusiness.csproj" />
+      <ProjectReference Include="..\PriceAlerterDomain\PriceAlerterDomain.csproj" />
+    </ItemGroup>
+
 </Project>

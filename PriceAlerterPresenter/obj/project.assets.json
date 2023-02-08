@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "PriceAlerterBusiness/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "PriceAlerterDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PriceAlerterBusiness.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PriceAlerterBusiness.dll": {}
+        }
+      },
+      "PriceAlerterDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PriceAlerterDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PriceAlerterDomain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PriceAlerterBusiness/1.0.0": {
+      "type": "project",
+      "path": "../PriceAlerterBusiness/PriceAlerterBusiness.csproj",
+      "msbuildProject": "../PriceAlerterBusiness/PriceAlerterBusiness.csproj"
+    },
+    "PriceAlerterDomain/1.0.0": {
+      "type": "project",
+      "path": "../PriceAlerterDomain/PriceAlerterDomain.csproj",
+      "msbuildProject": "../PriceAlerterDomain/PriceAlerterDomain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "PriceAlerterBusiness >= 1.0.0",
+      "PriceAlerterDomain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ciplo\\.nuget\\packages\\": {}
@@ -31,7 +69,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\PROIECTE\\PriceAlerter\\PriceAlerterBusiness\\PriceAlerterBusiness.csproj": {
+              "projectPath": "D:\\PROIECTE\\PriceAlerter\\PriceAlerterBusiness\\PriceAlerterBusiness.csproj"
+            },
+            "D:\\PROIECTE\\PriceAlerter\\PriceAlerterDomain\\PriceAlerterDomain.csproj": {
+              "projectPath": "D:\\PROIECTE\\PriceAlerter\\PriceAlerterDomain\\PriceAlerterDomain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
