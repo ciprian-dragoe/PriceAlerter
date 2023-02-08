@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Set Price Limit";
+}
+
+<link rel="stylesheet" href="/css/links/addPriceLimitToLink.css">
+
+<form>
+    <img src="/images/empty-product.webp">
+    <label>URL to the page containing the product you want to buy:</label>
+    <input type="url" id="urlInput">
+    <div id="invalidDomain" class="hidden">
+        <label class="alert-danger">This website is not supported</label>
+    </div>
+    <div id="priceParameters" class="hidden">
+        <div> 
+            <label>Current product price:</label>
+            <input type="number" id="currentProductPrice">
+        </div>
+        <div>
+            <label>Alert when price reaches this level:</label>
+            <input type="number" id="targetProductPrice">
+        </div>
+        <button type="submit" class="btn btn-primary">Add new product to monitor</button>
+    </div>
+</form>
+<script type="module" src="/js/links/addPriceLimitToLink.js"></script>

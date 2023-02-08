@@ -1,0 +1,38 @@
+﻿:root {
+    --container-width: 50vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: var(--container-width);
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+form * {
+    margin: 3px;
+}
+
+form div div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+form button {
+    width: 100%;
+}
+
+form > div > div > * {
+    flex: 1;
+}
+
+img {
+    width: var(--container-width);
+}
+
+.hidden {
+    display: none;
+}
